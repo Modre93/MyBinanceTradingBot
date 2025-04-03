@@ -1,4 +1,4 @@
-.idea/
+*.idea/
 binance.log
 .env
 
