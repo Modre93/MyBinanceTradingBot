@@ -1,8 +1,13 @@
 import logging
 from binance.um_futures import UMFutures
 from binance.lib.utils import config_logging
-from keys import TESTAPIKEY, TESTSECRETKEY
+from dotenv import load_dotenv
+import os
 import time
+
+load_dotenv()
+TESTAPIKEY = os.getenv("TESTAPIKEY")
+TESTSECRETKEY = os.getenv("TESTSECRETKEY")
 
 # Configure logging
 config_logging(logging, logging.DEBUG, 'binance.log')
@@ -15,9 +20,9 @@ client = UMFutures(
 
 """
 My Strategy:
-Investe 10% of my usdt balance: Investe 10% of my usdt balance only if it's worths $100 or more placing a buy market order with a 3x leverage in ISOLATED type. 
+Invest 10% of my usdt balance: Invest 10% of my usdt balance only if it's worth $100 or more placing a buy market order with a 3x leverage in ISOLATED type. 
 Secure my position: Then i place a take profit order when my unrealized profit is greater than or equal to 10% of my position size;
-a buy market order just above my liquidation price with amout that is twice my curent position size;
+a buy market order just above my liquidation price with amount that is twice my current position size;
 finally i place a buy market order just above my take profit price with 10% of my current balance;
 
 1. Check  if any position is open
