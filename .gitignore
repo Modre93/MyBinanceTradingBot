@@ -1,4 +1,4 @@
 *.idea/
 binance.log
 .env
-
+/.idea/inspectionProfiles/
