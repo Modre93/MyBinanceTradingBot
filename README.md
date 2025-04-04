@@ -17,4 +17,5 @@ finally i place a buy market order just above my take profit price with 10% of m
 
 Tested on chart from 2021 to 2023 it gave 254% ROI on BTCUSDT.
 
+Here is a general flowchart of my strategy:
 ![Strategy flowchart](assets/images/FlowChart.jpeg)
